@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript - ModB-EX03</title>
+    <style>
+        body {
+            background-color: #733da7;
+        }
+
+        h1 {
+            font-size: 2em;
+            color: yellowgreen;
+            text-shadow: 2px 2px 5px black;
+        }
+    </style>
+</head>
+<body>
+<!-- cOMENTÁRIO SÓ PARA html -->
+<h1>Primeiro HTML</h1>
+<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquid libero ad architecto. Aliquid vel itaque ad libero
+    voluptatibus adipisci provident autem, tenetur recusandae nobis laudantium omnis dolorem? Nihil, temporibus
+    ipsam?</p>
+
+<h2>Primeiros Scripts Javascript</h2>
+
+<script>
+    n1 = prompt('Digite o 1º nª');
+    n2 = prompt('Digite o 2º nª');
+    Soma = n1 + n2;     //trata como string
+    window.alert("A soma sai como concatenação, veja: " + soma);
+    //
+    nome = prompt('Digite seu nome')
+    alert('Seu nome é ' + nome)
+    //
+    alert('refazendo de forma diferente e usando a conversão diretamente no comando')
+    n1 = Number.parseInt(window.prompt('Digite o 1º nº'))
+    n2 = parseInt(window.prompt('Digite o 2º nº'))
+    Soma = n1 + n2      //trata como INTEIRO
+    alert('A soma sai normal, veja: ' + soma)
+    //
+    alert('Usando somente NUMBER(N) - inclusive serve para ponto flutuante (nr REAL) diretamente no comando')
+    n1 = prompt('Digite o 1º nº')
+    n2 = prompt('Digite o 2º nº')
+    Soma = Number(n1) + Number(n2)  //Jaascript decide se INTEIRO ou REAL (flutuante)
+    alert('A soma foi decidida pelo Javascript, veja: ' + soma)
+</script>
+</body>
+</html>
