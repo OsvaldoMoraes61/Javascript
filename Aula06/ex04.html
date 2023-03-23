@@ -1,12 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="PT-BR">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Javascript</title>
+    <style>
+        body { background-color: rgba(168, 43, 43, 0.603) ;
+        }
+    </style>
 </head>
 <body>
-    
+    <h1>Novos Comandos</h1>
+    <h3>Funcões: document.Write e document.writeln</h3>
+    <h3>Lenght - Uppercase - Lowercase</h3>
+       
+    <script>
+        var nome = prompt('Qual é o seu nome ?')
+        document.write('Qual é o seu nome?')
+        document.writeln(`Seu nome é <strong> ${nome} </strong>, <br>
+        tem ${nome.length} letras e só pra zoar ele <br> 
+        em maiúscula fica assim:-> ${nome.toUpperCase()} e <br>
+        em minúscula fica assim:-> ${nome.toLowerCase()}`)
+    </script>
+
+    <p>Não esqueça do parágrafo na frente da <strong>função de conversão</strong>.
+    <br> Tb não esquecer que as variáveis são <u>CaseSensitive</u> </p>
+
+    <h3>toFixed(n) e toFixed(n).replace('.',',')</h3>
+
+    <script>
+        var nr = 1549.32556 //5 casas  decimais
+        document.writeln(`O Nr (${nr}) com 2 casas decimais fixadas fica assim: ${nr.toFixed(2)}`)
+        document.writeln(`O mesmo Nr, trocando o ponto por vírgula fica assim:  ${nr.toFixed(2).replace('.',',')} `)
+        document.writeln('<h3>n.ToLocaleString()</h3>')
+        document.writeln('Brasil (Real) '+ nr.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'}))
+        document.writeln('<br> Dolar Americano '+ nr.toLocaleString('pr-BR', {style: 'currency', currency: 'USD'}))
+        document.writeln('<br> Euro '+ nr.toLocaleString('pt-BR', {style: 'currency', currency: 'EUR'}))
+        document.writeln('<br> Iene/Yen/JPY '+ nr.toLocaleString('pt-BR', {style: 'currency', currency: 'JPY'}))
+        
+    </script>
 </body>
 </html>
