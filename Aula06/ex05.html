@@ -5,15 +5,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Javascript EX05</title>
+    <style>
+        body{
+            background-color: rgb(64, 64, 224);
+        }
+    </style>
 </head>
 <body>
     <h1>Ex 05</h1>
 
     <script>
-        n1 = prompt('Digite Um: ')
+        n1 = prompt('Digite Um String Normal: ')
         n2 = prompt('Digite Dois: ')
         soma = n1 + n2
         alert('Soma de strings = ' + soma)
+
+        var nr3 = prompt( 'Digite o 1º nª String');
+        var nr4 = prompt( 'Digite o 2º nª');
+        var soma1 = nr3 + nr4 ;     //trata como string
+        window.alert("A soma sai como concatenação, veja: " + soma1);
+        //
+        var nome = prompt('Digite seu nome')
+        alert('Seu nome é '+ nome) 
+        //
+        alert('refazendo de forma diferente e usando a conversão diretamente no comando')
+        n1a = Number.parseInt(window.prompt( 'Digite o 1º nº ParseInt'))
+        n2a = parseInt( window.prompt( 'Digite o 2º nº Direto no prompt'))
+        soma = n1a + n2a      //trata como INTEIRO
+        alert('A soma sai normal, veja: ' + soma)
+        //
+        alert('Usando somente NUMBER(N) - inclusive serve para ponto flutuante (nr REAL) diretamente no comando')
+        n1B = prompt( 'Digite o 1º nº Real ')
+        n2B = prompt( 'Digite o 2º nº Real ')
+        Soma = Number(n1B) + Number(n2B)  //Jaascript decide se INTEIRO ou REAL (flutuante)
+        alert('A soma foi decidida pelo Javascript, veja: ' + Soma) //atenção ao CapsLock
+          
     </script>
     
 </body>
