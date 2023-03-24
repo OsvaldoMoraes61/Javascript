@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com o DOM</title>
+    <style>
+        body {
+            background-color: rgba(84, 84, 216, 0.856);
+            color: white;
+            font: normal 14pt arial;
+
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos DOM</h1>
+    <p>aqui vai o resultado</p>
+    <p>Aprendendo a programar JavaScript</p>
+    <p>Aprendendo a usar <strong>DOM</strong> em JavaScript</p>
+    <div>
+        <img src="imagens/Arvore_DOM.png" alt="Árvore DOM">
+    </div>
+
+    <div id="msg"> clique em mim  por ID = msg</div>
+    <br>
+    <div class="cla1"> Por Classe </div>
+    <br>
+    <div name="nm1"> Por Nome </div>
+    <br>
+    <div>
+        <img src="imagens/Selecionar elementos da árvore DOM.png" alt="Selecionar elementos da árvore DOM">
+        <br>        
+        <img src="imagens/Selecionar elementos da árvore DOM por Marca.png" alt="Selecionar elementos da árvore DOM por Marca">
+        <br>        
+        <img src="imagens/Selecionar elementos da árvore DOM por ID.png" alt="Selecionar elementos da árvore DOM por ID">
+        <br>        
+        <img src="imagens/Selecionar elementos da árvore DOM por NOME.png" alt="Selecionar elementos da árvore DOM por NOME">
+        <br>        
+        <img src="imagens/Selecionar elementos da árvore DOM por CLASSE.png" alt="Selecionar elementos da árvore DOM por CLASSE">
+        <br>        
+        <img src="imagens/Selecionar elementos da árvore DOM por QUERYSELECTOR().png" alt="Selecionar elementos da árvore DOM por QUERYSELECTOR().png">
+
+    </div>
+    <script>
+        window.document.write('Olá, Mundo!')
+        window.document.write('<br> <h3>Window.document.charset e url - navigator.appName</h3>')        
+        window.document.write('<br> Mostrar o CharSet: ' + window.document.charset)
+        window.document.write('<br> Mostrar o Navegador: ' + window.navigator.appName)
+        window.document.write('<br> Mostrar o URL de acesso: ' + window.document.URL)
+        //  
+        var corpo   = window.document.body
+        var p1      = window.document.getElementsByTagName('p')[2]
+        var men1    = window.document.getElementById('msg')
+        var cl1     = window.document.getElementsByClassName('cla1')[0]
+        var nme     = window.document.getElementsByName('nm1')[0]
+
+        window.document.write('<br> Está escrito:' + p1.innerText)
+        window.document.write('<br> Está escrito com a formatação:' + p1.innerHTML)
+        corpo.style.backgroundColor = 'DarkGreen'
+        p1.style.color = 'red'
+        window.document.getElementById('msg').innerText = 'Troquei a frase'
+        men1.style.backgroundColor = 'yellow'
+        men1.style.color = 'Black'
+        men1.innerText = 'Estou aguardando...'
+        cl1.style.backgroundColor = 'black'
+        // cl1.innerText = 'Estou aguardando...'
+        nme.style.backgroundColor = 'red'
+        nme.innerText = 'Estou aguardando...'
+
+        // usando as tag do CSS
+        var mensagem1  = window.document.querySelector('div#msg') //para ID
+        mensagem1.style.color = 'blue'
+        mensagem1.style.backgroundColor = 'red'
+        var classe1    = window.document.querySelector('div.cla1')[0] //para CLASSE
+        classe1.style.backgroundColor = 'magenta'
+        classe1.style.color = 'green'
+        
+    </script>
+    
+</body>
+</html>
