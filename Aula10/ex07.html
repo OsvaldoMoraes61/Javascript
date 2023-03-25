@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        body {
+            font: normal 20pt arial;
+        }
+        input  {
+            font: normal 40px arial;
+            width: 150px;
+        }
+        div#res {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Somando valores em HTML / JavaScript</h1>
+    <input type="number" name="txtname1" id="txtid1" > +
+    <input type="number" name="txtname2" id="txtid2" >
+    <input type="button" value="Somar" onclick="somar()" ondblclick="inverter()">
+    <div id="res">Resultado da Soma/Inversão </div>
+    <script>
+        //  a.addEventListener('click', somar)
+        //  a.addEventListener('dblclick', inverter)
+        var txt1 = document.getElementById('txtid1')
+        var txt2 = document.querySelector('input#txtid2')
+        var res = document.getElementById('res')
+
+        function somar() {
+            var n1 = Number(txt1.value)
+            var n2 = Number(txt2.value)
+            var s = (n1 + n2) 
+            res.innerHTML = `A soma entre ${n1} e ${n2} é igual a <strong> ${s} </strong> `
+        }
+        function inverter() {
+            var n1 = Number(txt1.value)
+            var n2 = Number(txt2.value)
+            var s = (n1 + n2) 
+            res.innerHTML = `Invertido fica...  <strong> ${s} </strong> é a soma de (n2) ${n2}  e  (n1) ${n1}`
+        }
+    </script>
+    
+</body>
+</html>

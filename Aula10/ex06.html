@@ -4,25 +4,58 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Primeiros passos com o DOM</title>
+    <title>Eventos DOM</title>
     <style>
-        body {
-            background-color: rgba(32, 128, 8, 0.856);
+        div#area {
+            background-color: #186d03da;
             color: white;
-            font: normal 14pt arial;
+            font: normal 20pt arial;
+            width: 200px;
+            height: 200px;
+            line-height: 100px;
+            text-align: center;
 
         }
     </style>
 </head>
 <body>
-    <h1>Iniciando estudos DOM</h1>
-    <p>aqui vai o resultado</p>
-    <p>Aprendendo a programar JavaScript</p>
-    <div id="msg"> * </div>
-    <div class="cla1"> * </div>
-    <div name="nm1"> * </div>
-    <div> <img src="imagens/Arvore_DOM.png" alt="Árvore DOM"> </div>
+    <!--
+    <h1>Eventos DOM JavaScript</h1>
+    A forma abaixo polui um pouco o codigo HTML e pode ser 
+    substituido por outra forma dentro do código JAVASCRIPT-->
+    <!--
+        <div id="area" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()"> 
+            Interaja...
+        </div>
+    -->
+    <div id="area">
+        Eventos...
+    </div>
+
     <script>
+        //Declaração da variavel como global
+        var a = document.getElementById('area')
+        // ouvir o evento...
+        a.addEventListener('click', clicar)
+        a.addEventListener('mouseenter', entrar)
+        a.addEventListener('mouseout', sair)
+
+        function clicar() {
+            a.innerText = 'Clicou-me... (click)'
+            a.style.backgroundColor = 'yellow'
+            a.style.color = 'red'
+            a.style.textShadow = '3px 10px 5px black'
+        }
+        function entrar() {
+            a.innerText = 'Entrou... mouseenter'
+            a.style.color = 'blue'
+        }
+
+        function sair() {
+            a.innerText = 'Saiu!... mouseout'
+            a.style.backgroundColor = '#186d03da'
+            a.style.color = 'black'
+        }
  
         
     </script>
